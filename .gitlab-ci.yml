@@ -1,0 +1,133 @@
+workflow:
+    rules: 
+    - if: $CI_PIPELINE_SOURCE == "push"
+      when: never
+    - when: always
+# Este archivo es una plantilla y es posible que deba editarse antes de que funcione en su proyecto.
+# Para contribuir con mejoras a las plantillas de CI/CD, siga la guía de desarrollo en:
+# https://docs.gitlab.com/ee/development/cicd/templates.html
+# Esta plantilla específica se encuentra en:
+# https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Maven.gitlab-ci.yml
+
+# Cree aplicaciones JAVA utilizando Apache Maven (http://maven.apache.org)
+# Para las etiquetas de imagen de la ventana acoplable, consulte (For docker image tags see) https://hub.docker.com/_/maven/ 
+#
+# ↓ ↓ ↓ ↓ → úTIL: Un ciclo de vida de compilación se compone de fases
+# Para obtener información general sobre el ciclo de vida, consulte https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html
+# ↑ ↑ ↑ ↑
+# Cada uno de estos ciclos de vida de construcción está definido por una lista diferente de fases de construcción, donde una fase de construcción representa una etapa en el ciclo de vida.
+# 
+# Por ejemplo, el ciclo de vida predeterminado consta de las siguientes fases (para obtener una lista completa de las fases del ciclo de vida, consulte la Referencia del ciclo de vida ):
+# 
+# validate- validar que el proyecto sea correcto y que toda la información necesaria esté disponible
+# compile- compilar el código fuente del proyecto
+# test- probar el código fuente compilado utilizando un marco de prueba de unidad adecuado. Estas pruebas no deberían requerir que el código sea empaquetado o implementado.
+# package- tomar el código compilado y empaquetarlo en su formato distribuible, como un JAR.
+# verify- ejecutar cualquier verificación de los resultados de las pruebas de integración para garantizar que se cumplan los criterios de calidad
+# install- instalar el paquete en el repositorio local, para usarlo como dependencia en otros proyectos localmente
+# deploy- Realizado en el entorno de compilación, copia el paquete final en el repositorio remoto para compartirlo con otros desarrolladores y proyectos.
+# ↑ ↑ ↑ ↑ → úTIL: Un ciclo de vida de compilación se compone de fases
+
+# Esta plantilla construirá y probará sus proyectos
+# * Guarda en caché las dependencias descargadas y los complementos entre invocaciones.
+# * Verifique pero no implemente los merge requests.
+# * Implemente artefactos creados solo desde la rama principal.
+
+variables:
+  PROJECT_DIR: '$CI_PROJECT_DIR'
+  # Esto suprimirá cualquier descarga de dependencias y complementos o cargará mensajes que saturarían el registro de la consola.
+  # `showDateTime` mostrará el tiempo transcurrido en milisegundos. Debe especificar `--batch-mode` para que esto funcione.
+  #MAVEN_OPTS: "-Dhttps.protocols=TLSv1.2 -Dmaven.repo.local=$CI_PROJECT_DIR/.m2/repository -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=WARN -Dorg.slf4j.simpleLogger.showDateTime=true -Djava.awt.headless=true"
+  # A partir de Maven 3.3.0, en lugar de esto, puede definir estas opciones en `.mvn/maven.config` para que se use la misma configuración
+  # cuando se ejecuta desde la línea de comandos.
+  # `installAtEnd` y `deployAtEnd` solo son efectivos con la versión reciente de los complementos correspondientes.
+  #MAVEN_CLI_OPTS: "--batch-mode --errors --fail-at-end --show-version -DinstallAtEnd=true -DdeployAtEnd=true"
+
+# Caché de dependencias y complementos descargados entre compilaciones.
+# Para mantener el caché en las sucursales, agregue 'clave: "$CI_JOB_NAME"'
+#cache:
+#    paths:
+#        - .m2/repository
+
+image: maven:3.6.3-jdk-8
+stages:          # Lista de etapas de los trabajos y su orden de ejecución
+#  
+  - start
+  - build
+  - test
+  - verify_tests
+
+
+start_canal1:     
+
+  stage: start
+
+  rules:
+    - if: $NOTIFICAR== "True"
+  script:
+
+    - 'curl.exe -L -X POST -k "$URL" -H "$TOKEN" -H "Content-Type: $CONTENT" --data-raw "{\""roomId\"":\""$ROOM\"", \""markdown\"":\""$TEXTO\""}"'
+  #- 'curl.exe -L -X POST -k "$URL" -H "$TOKEN" -H "Content-Type: $CONTENT" --data-raw "{\""roomId\"":\""$ROOM\"", \""markdown\"":\""$TEXTOFIN\""}"'
+
+    
+  allow_failure: True 
+  tags:
+    - AutomatStabilityTests # Indica el runner que va a utilizar para ejecutar el job
+
+
+build_a:
+  stage: build
+  script:
+    - 'mvn compile'
+
+  allow_failure: False 
+  tags:
+    - AutomatStabilityTests
+
+test_a:
+  stage: test
+  script:
+ 
+    - 'mvn clean verify -Denvironment="$ENTORNO" -f "$PROJECT_DIR"'
+
+  allow_failure: False 
+
+  artifacts:
+    when: always
+    paths:
+      - target
+      #- target/site/serenity
+  tags:
+    - AutomatStabilityTests
+
+
+tests_passed:
+  stage: verify_tests
+  needs: [test_a]
+  when: on_success
+  rules:
+    - if: $NOTIFICAR== "True"
+  script:
+    - 'curl.exe -L -X POST -k "$URL" -H "$TOKEN" -H "Content-Type: $CONTENT" --data-raw "{\""roomId\"":\""$ROOM\"", \""markdown\"":\""$PASSED\""}"'
+    #-  do whatever you need to when a job fails
+
+  allow_failure: False 
+  tags:
+    - AutomatStabilityTests
+  
+tests_failed:
+  stage: verify_tests
+  needs: [test_a]
+  when: on_failure
+  rules:
+    - if: $NOTIFICAR== "True"
+  script:
+    - 'curl.exe -L -X POST -k "$URL" -H "$TOKEN" -H "Content-Type: $CONTENT" --data-raw "{\""roomId\"":\""$ROOM\"", \""markdown\"":\""$FAILED\""}"'
+    #-  do whatever you need to when a job fails
+
+  allow_failure: False 
+  tags:
+    - AutomatStabilityTests
+
+
+
