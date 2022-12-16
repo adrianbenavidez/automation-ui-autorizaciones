@@ -1,6 +1,6 @@
-package com.gruposancorseguros.natalpsal.autorizaciones.screenplay.global.screenplay.global.questions;
+package com.gruposancorseguros.natalpsal.automatizacionesUI.screenplay.global.screenplay.global.questions;
 
-import com.gruposancorseguros.natalpsal.autorizaciones.screenplay.global.screenplay.global.elements.Label;
+import com.gruposancorseguros.natalpsal.automatizacionesUI.screenplay.global.screenplay.global.elements.Label;
 import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.questions.Text;
 

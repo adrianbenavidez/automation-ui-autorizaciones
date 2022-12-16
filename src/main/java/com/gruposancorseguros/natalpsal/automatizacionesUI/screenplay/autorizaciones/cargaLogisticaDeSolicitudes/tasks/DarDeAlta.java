@@ -1,11 +1,11 @@
-package com.gruposancorseguros.natalpsal.autorizaciones.screenplay.cargaLogisticaDeSolicitudes.tasks;
+package com.gruposancorseguros.natalpsal.automatizacionesUI.screenplay.autorizaciones.cargaLogisticaDeSolicitudes.tasks;
 import net.serenitybdd.screenplay.Actor;
 
-import com.gruposancorseguros.natalpsal.autorizaciones.screenplay.global.tasks.Cargar;
-import com.gruposancorseguros.natalpsal.autorizaciones.screenplay.global.ui.*;
-import com.gruposancorseguros.natalpsal.autorizaciones.screenplay.global.screenplay.global.questions.ElTexto;
-import com.gruposancorseguros.natalpsal.autorizaciones.screenplay.global.screenplay.global.tasks.HacerClick;
-import com.gruposancorseguros.natalpsal.autorizaciones.screenplay.global.screenplay.global.tasks.IngresarElValor;
+import com.gruposancorseguros.natalpsal.automatizacionesUI.screenplay.global.tasks.Cargar;
+import com.gruposancorseguros.natalpsal.automatizacionesUI.screenplay.global.ui.*;
+import com.gruposancorseguros.natalpsal.automatizacionesUI.screenplay.global.screenplay.global.questions.ElTexto;
+import com.gruposancorseguros.natalpsal.automatizacionesUI.screenplay.global.screenplay.global.tasks.HacerClick;
+import com.gruposancorseguros.natalpsal.automatizacionesUI.screenplay.global.screenplay.global.tasks.IngresarElValor;
 
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.waits.WaitUntil;

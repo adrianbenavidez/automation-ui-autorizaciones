@@ -1,8 +1,8 @@
-package com.gruposancorseguros.natalpsal.autorizaciones.steps.global;
+package com.gruposancorseguros.natalpsal.automatizacionesUI.steps.global;
 
 
-import com.gruposancorseguros.natalpsal.autorizaciones.screenplay.global.tasks.LoguearseEnNatal;
-import com.gruposancorseguros.natalpsal.autorizaciones.screenplay.global.screenplay.ScreenplaySetup;
+import com.gruposancorseguros.natalpsal.automatizacionesUI.screenplay.global.tasks.LoguearseEnNatal;
+import com.gruposancorseguros.natalpsal.automatizacionesUI.screenplay.global.screenplay.ScreenplaySetup;
 
 import io.cucumber.java.Before;
 

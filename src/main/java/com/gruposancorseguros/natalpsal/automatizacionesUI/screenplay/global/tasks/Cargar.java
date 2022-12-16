@@ -1,8 +1,8 @@
-package com.gruposancorseguros.natalpsal.autorizaciones.screenplay.global.tasks;
+package com.gruposancorseguros.natalpsal.automatizacionesUI.screenplay.global.tasks;
 
-import com.gruposancorseguros.natalpsal.autorizaciones.screenplay.global.ui.Boton;
-import com.gruposancorseguros.natalpsal.autorizaciones.screenplay.global.ui.Campo;
-import com.gruposancorseguros.natalpsal.autorizaciones.screenplay.global.screenplay.global.tasks.HacerClick;
+import com.gruposancorseguros.natalpsal.automatizacionesUI.screenplay.global.ui.Boton;
+import com.gruposancorseguros.natalpsal.automatizacionesUI.screenplay.global.ui.Campo;
+import com.gruposancorseguros.natalpsal.automatizacionesUI.screenplay.global.screenplay.global.tasks.HacerClick;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Enter;

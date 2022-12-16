@@ -1,7 +1,7 @@
-package com.gruposancorseguros.natalpsal.autorizaciones.screenplay.global.screenplay.global.actions;
+package com.gruposancorseguros.natalpsal.automatizacionesUI.screenplay.global.screenplay.global.actions;
 
-import com.gruposancorseguros.natalpsal.autorizaciones.screenplay.global.screenplay.global.elements.pages.GrillaDeSupervision;
-import com.gruposancorseguros.natalpsal.autorizaciones.screenplay.global.screenplay.global.elements.pages.Login;
+import com.gruposancorseguros.natalpsal.automatizacionesUI.screenplay.global.screenplay.global.elements.pages.GrillaDeSupervision;
+import com.gruposancorseguros.natalpsal.automatizacionesUI.screenplay.global.screenplay.global.elements.pages.Login;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Open;

@@ -1,4 +1,4 @@
-package com.gruposancorseguros.natalpsal.autorizaciones.screenplay.global;
+package com.gruposancorseguros.natalpsal.automatizacionesUI.screenplay.global;
 
 import io.github.bonigarcia.wdm.config.DriverManagerType;
 import io.github.bonigarcia.wdm.managers.ChromeDriverManager;

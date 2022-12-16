@@ -1,4 +1,4 @@
-package com.gruposancorseguros.natalpsal.autorizaciones.screenplay.global.screenplay.global.actions;
+package com.gruposancorseguros.natalpsal.automatizacionesUI.screenplay.global.screenplay.global.actions;
 
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.serenitybdd.screenplay.Actor;

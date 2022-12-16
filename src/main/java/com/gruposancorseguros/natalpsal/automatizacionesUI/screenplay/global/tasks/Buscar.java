@@ -1,10 +1,10 @@
-package com.gruposancorseguros.natalpsal.autorizaciones.screenplay.global.tasks;
+package com.gruposancorseguros.natalpsal.automatizacionesUI.screenplay.global.tasks;
 
-import com.gruposancorseguros.natalpsal.autorizaciones.screenplay.global.ui.Campo;
-import com.gruposancorseguros.natalpsal.autorizaciones.screenplay.global.ui.Etiqueta;
-import com.gruposancorseguros.natalpsal.autorizaciones.screenplay.global.ui.ListaDesplegable;
-import com.gruposancorseguros.natalpsal.autorizaciones.screenplay.global.screenplay.global.actions.Recorrer;
-import com.gruposancorseguros.natalpsal.autorizaciones.screenplay.global.screenplay.global.tasks.IngresarElValor;
+import com.gruposancorseguros.natalpsal.automatizacionesUI.screenplay.global.ui.Campo;
+import com.gruposancorseguros.natalpsal.automatizacionesUI.screenplay.global.ui.Etiqueta;
+import com.gruposancorseguros.natalpsal.automatizacionesUI.screenplay.global.ui.ListaDesplegable;
+import com.gruposancorseguros.natalpsal.automatizacionesUI.screenplay.global.screenplay.global.actions.Recorrer;
+import com.gruposancorseguros.natalpsal.automatizacionesUI.screenplay.global.screenplay.global.tasks.IngresarElValor;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.waits.WaitUntil;

@@ -1,7 +1,7 @@
-package com.gruposancorseguros.natalpsal.autorizaciones.screenplay.global.screenplay.global.actions;
+package com.gruposancorseguros.natalpsal.automatizacionesUI.screenplay.global.screenplay.global.actions;
 
-import com.gruposancorseguros.natalpsal.autorizaciones.screenplay.global.screenplay.global.tasks.EnElCampoContrasenia;
-import com.gruposancorseguros.natalpsal.autorizaciones.screenplay.global.screenplay.global.tasks.EnElCampoUsuario;
+import com.gruposancorseguros.natalpsal.automatizacionesUI.screenplay.global.screenplay.global.tasks.EnElCampoContrasenia;
+import com.gruposancorseguros.natalpsal.automatizacionesUI.screenplay.global.screenplay.global.tasks.EnElCampoUsuario;
 
 public class IngresarValor {
 

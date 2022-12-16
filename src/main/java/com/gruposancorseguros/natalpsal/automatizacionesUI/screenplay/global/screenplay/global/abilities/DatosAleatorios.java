@@ -1,4 +1,4 @@
-package com.gruposancorseguros.natalpsal.autorizaciones.screenplay.global.screenplay.global.abilities;
+package com.gruposancorseguros.natalpsal.automatizacionesUI.screenplay.global.screenplay.global.abilities;
 
 import net.serenitybdd.screenplay.Ability;
 

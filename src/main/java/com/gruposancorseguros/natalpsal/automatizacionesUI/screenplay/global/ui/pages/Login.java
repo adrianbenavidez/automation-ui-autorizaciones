@@ -1,4 +1,4 @@
-package com.gruposancorseguros.natalpsal.autorizaciones.screenplay.global.ui.pages;
+package com.gruposancorseguros.natalpsal.automatizacionesUI.screenplay.global.ui.pages;
 
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.annotations.Managed;

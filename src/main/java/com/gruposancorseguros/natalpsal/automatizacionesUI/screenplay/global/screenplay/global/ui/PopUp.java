@@ -1,4 +1,4 @@
-package com.gruposancorseguros.natalpsal.autorizaciones.screenplay.global.screenplay.global.ui;
+package com.gruposancorseguros.natalpsal.automatizacionesUI.screenplay.global.screenplay.global.ui;
 
 import net.serenitybdd.screenplay.targets.Target;
 import org.openqa.selenium.By;

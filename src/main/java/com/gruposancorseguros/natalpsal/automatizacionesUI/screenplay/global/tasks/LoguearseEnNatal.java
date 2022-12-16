@@ -1,17 +1,17 @@
-package com.gruposancorseguros.natalpsal.autorizaciones.screenplay.global.tasks;
+package com.gruposancorseguros.natalpsal.automatizacionesUI.screenplay.global.tasks;
 
-import com.gruposancorseguros.natalpsal.autorizaciones.screenplay.global.ui.Menu;
-import com.gruposancorseguros.natalpsal.autorizaciones.screenplay.global.ui.PopUp;
-import com.gruposancorseguros.natalpsal.autorizaciones.screenplay.global.ui.pages.Login;
-import com.gruposancorseguros.natalpsal.autorizaciones.screenplay.global.screenplay.global.abilities.UsuarioLogin;
-import com.gruposancorseguros.natalpsal.autorizaciones.screenplay.global.screenplay.global.tasks.Navegar;
+import com.gruposancorseguros.natalpsal.automatizacionesUI.screenplay.global.ui.Menu;
+import com.gruposancorseguros.natalpsal.automatizacionesUI.screenplay.global.ui.PopUp;
+import com.gruposancorseguros.natalpsal.automatizacionesUI.screenplay.global.ui.pages.Login;
+import com.gruposancorseguros.natalpsal.automatizacionesUI.screenplay.global.screenplay.global.abilities.UsuarioLogin;
+import com.gruposancorseguros.natalpsal.automatizacionesUI.screenplay.global.screenplay.global.tasks.Navegar;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
-import com.gruposancorseguros.natalpsal.autorizaciones.screenplay.global.screenplay.global.tasks.IngresarElValor;
-import com.gruposancorseguros.natalpsal.autorizaciones.screenplay.global.screenplay.global.tasks.HacerClick;
+import com.gruposancorseguros.natalpsal.automatizacionesUI.screenplay.global.screenplay.global.tasks.IngresarElValor;
+import com.gruposancorseguros.natalpsal.automatizacionesUI.screenplay.global.screenplay.global.tasks.HacerClick;
 import net.serenitybdd.screenplay.conditions.Check;
-import com.gruposancorseguros.natalpsal.autorizaciones.screenplay.global.ui.Campo;
-import com.gruposancorseguros.natalpsal.autorizaciones.screenplay.global.ui.Boton;
+import com.gruposancorseguros.natalpsal.automatizacionesUI.screenplay.global.ui.Campo;
+import com.gruposancorseguros.natalpsal.automatizacionesUI.screenplay.global.ui.Boton;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 import org.openqa.selenium.remote.server.handler.GetAlertText;
 import org.openqa.selenium.remote.server.handler.GetTitle;

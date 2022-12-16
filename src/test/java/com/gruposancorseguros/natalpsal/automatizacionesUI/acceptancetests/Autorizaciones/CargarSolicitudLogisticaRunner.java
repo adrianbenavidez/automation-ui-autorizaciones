@@ -1,4 +1,4 @@
-package com.gruposancorseguros.natalpsal.autorizaciones.acceptancetests;
+package com.gruposancorseguros.natalpsal.automatizacionesUI.acceptancetests;
 import net.serenitybdd.cucumber.CucumberWithSerenity;
 import org.junit.runner.RunWith;
 import io.cucumber.junit.CucumberOptions;
@@ -16,8 +16,8 @@ import io.cucumber.junit.CucumberOptions;
         features = "src/test/resources/autorizaciones/features/cargaLogisticaDeSolicitudes/cargaLogisticaDeSolicitudes.feature",
         //ruta del paquete donde estan los step definition de la feature
         glue = {
-                "com.gruposancorseguros.natalpsal.autorizaciones.steps.cargaLogisticaDeSolicitudes",
-                "com.gruposancorseguros.natalpsal.autorizaciones.steps.global"},
+                "com.gruposancorseguros.natalpsal.automatizacionesUI.steps.autorizaciones.cargaLogisticaDeSolicitudes",
+                "com.gruposancorseguros.natalpsal.automatizacionesUI.steps.global"},
         // especificamos que la salida se muestre con colores
         plugin = "pretty",
         tags   = "@estabilidad"

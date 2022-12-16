@@ -1,4 +1,4 @@
-package com.gruposancorseguros.natalpsal.autorizaciones.screenplay.global.screenplay.global.elements;
+package com.gruposancorseguros.natalpsal.automatizacionesUI.screenplay.global.screenplay.global.elements;
 
 import net.serenitybdd.core.annotations.findby.By;
 import net.serenitybdd.screenplay.targets.Target;

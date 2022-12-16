@@ -1,6 +1,6 @@
-package com.gruposancorseguros.natalpsal.autorizaciones.screenplay.global.screenplay.global.actions;
+package com.gruposancorseguros.natalpsal.automatizacionesUI.screenplay.global.screenplay.global.actions;
 
-import com.gruposancorseguros.natalpsal.autorizaciones.screenplay.global.screenplay.global.ui.ListaDesplegable;
+import com.gruposancorseguros.natalpsal.automatizacionesUI.screenplay.global.screenplay.global.ui.ListaDesplegable;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.actions.Enter;
