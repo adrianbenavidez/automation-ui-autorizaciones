@@ -11,4 +11,13 @@ public class SubMenu {
     public static Target NUEVO_PROCESO_BATCH = Target.the("NuevoBatch").located(By.xpath("//a[contains(text(),'Nuevo Proceso')]"));
     public static Target LISTA_BATCHS = Target.the("ListaBatchs").located(By.xpath("//a[contains(text(),'Lista de Procesos')]"));
     public static Target GESTION_AFILIADOS = Target.the("GESTIÓN AFILIADOS").located(By.xpath("//a[contains(text(),'Gestión de Afiliados')]"));
+
+
+    //region Target para submenu
+    public static Target SOLICITUDES_DIRECTAS = Target.the("Solicitudes Directas").located(By.xpath("//a[contains(text(),'Solicitudes Directas')]"));
+
+    public static Target GRILLA_DE_SUPERVISION = Target.the("Grilla de supervisión").located(By.xpath("//a[contains(text(),'Grilla de supervisión')]"));
+    //endregion
+
+
 }
