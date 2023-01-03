@@ -48,6 +48,7 @@ public class CargaDirectaDeSolicitudesStepDef {
 
     @Entonces("accede a la pantalla Solicitud Directa")
     public void accedeALaPantallaSolicitudDirecta() {
+
         elUsuarioRegistrado.should(seeThat(ElTexto.de(Etiqueta.SOLICITUD_DIRECTA), equalTo("Solicitud directa")));
     }
 
@@ -171,6 +172,11 @@ public class CargaDirectaDeSolicitudesStepDef {
     @Cuando("ingresa el código de afiliado (.*)")
     public void ingresaElCodigoDeAfiliadoAfiliado(String afiliado) {
         elUsuarioRegistrado.attemptsTo(Buscar.afiliado(afiliado));
+
+
+        elUsuarioRegistrado.attemptsTo(WaitUntil.the(Etiqueta.INFORMACION_DEL_AFILIADO, isVisible()).forNoMoreThan(240).seconds());
+
+
         elUsuarioRegistrado.should(seeThat(ElTexto.de(Etiqueta.INFORMACION_DEL_AFILIADO), equalTo("Información del Afiliado")));
     }
 
